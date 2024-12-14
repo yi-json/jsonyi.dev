@@ -1,32 +1,8 @@
 ---
 ---
 
-@article{1802.05365v2,
-  author        = {Matthew E. Peters and Mark Neumann and Mohit Iyyer and Matt Gardner and Christopher Clark and Kenton Lee and Luke Zettlemoyer},
-  title         = {Deep contextualized word representations},
-  eprint        = {1802.05365v2},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CL},
-  abstract      = {We introduce a new type of deep contextualized word representation that
-                   models both (1) complex characteristics of word use (e.g., syntax and
-                   semantics), and (2) how these uses vary across linguistic contexts (i.e., to
-                   model polysemy). Our word vectors are learned functions of the internal states
-                   of a deep bidirectional language model (biLM), which is pre-trained on a large
-                   text corpus. We show that these representations can be easily added to existing
-                   models and significantly improve the state of the art across six challenging
-                   NLP problems, including question answering, textual entailment and sentiment
-                   analysis. We also present an analysis showing that exposing the deep internals
-                   of the pre-trained network is crucial, allowing downstream models to mix
-                   different types of semi-supervision signals.},
-  year          = {2018},
-  month         = {Feb},
-  url           = {http://arxiv.org/abs/1802.05365v2},
-  file          = {1802.05365v2.pdf},
-  eprintnover   = {1802.05365}
-}
-
 @article{2103.11251v2,
-  author        = {Chudi Zhong and Cynthia Rudin and Chaofen Chen and Zhi Chen and Haiyang Huang and Lesia Semenova},
+  author        = {Cynthia Rudin and Chaofen Chen and Zhi Chen and Haiyang Huang and Lesia Semenova and Chudi Zhong},
   title         = {Interpretable Machine Learning: Fundamental Principles and 10 Grand Challenges},
   eprint        = {2103.11251v2},
   archiveprefix = {arXiv},
@@ -78,7 +54,95 @@
                     produces only a single model.},
   year          = {2022},
   month         = {Oct},
-  url           = {https://arxiv.org/abs/2209.08040},
-  file          = {2209.08040.pdf},
+  url           = {https://arxiv.org/abs/2209.08040v2},
+  file          = {2209.08040v2.pdf},
   eprintnover   = {2209.08040}
+}
+
+@article{2006.08690v4,
+  author        = {Jimmy Lin and Chudi Zhong and Diane Hu and Cynthia Rudin and Margo Seltzer},
+  title         = {Generalized and Scalable Optimal Sparse Decision Trees},
+  eprint        = {2006.08690v4},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Decision tree optimization is notoriously difficult from a computational perspective but essential for the field of interpretable machine learning. Despite efforts over the past 40 years, only
+                    recently have optimization breakthroughs been
+                    made that have allowed practical algorithms to
+                    find optimal decision trees. These new techniques have the potential to trigger a paradigm
+                    shift where it is possible to construct sparse decision trees to efficiently optimize a variety of objective functions without relying on greedy splitting and pruning heuristics that often lead to suboptimal solutions. The contribution in this work
+                    is to provide a general framework for decision
+                    tree optimization that addresses the two significant open problems in the area: treatment of imbalanced data and fully optimizing over continuous variables. We present techniques that produce optimal decision trees over a variety of objectives including F-score, AUC, and partial area
+                    under the ROC convex hull. We also introduce
+                    a scalable algorithm that produces provably optimal results in the presence of continuous variables and speeds up decision tree construction by
+                    several orders of magnitude relative to the stateof-the art.},
+  year          = {2022},
+  month         = {Nov},
+  url           = {https://arxiv.org/abs/2006.08690},
+  file          = {2006.08690.pdf},
+  eprintnover   = {2006.08690v4}
+}
+
+@article{2006.08690v4,
+  author        = {Hayden McTavish and Chudi Zhong and Reto Achermann and Ilias Karimalis and Jacques Chen and Cynthia Rudin and Margo Seltzer},
+  title         = {Fast Sparse Decision Tree Optimization via Reference Ensembles},
+  eprint        = {2112.00798v7},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Sparse decision tree optimization has been one of the most fundamental problems in AI since its inception and is a challenge
+                    at the core of interpretable machine learning. Sparse decision
+                    tree optimization is computationally hard, and despite steady
+                    effort since the 1960’s, breakthroughs have been made on
+                    the problem only within the past few years, primarily on the
+                    problem of finding optimal sparse decision trees. However,
+                    current state-of-the-art algorithms often require impractical
+                    amounts of computation time and memory to find optimal or
+                    near-optimal trees for some real-world datasets, particularly
+                    those having several continuous-valued features. Given that the
+                    search spaces of these decision tree optimization problems are
+                    massive, can we practically hope to find a sparse decision tree
+                    that competes in accuracy with a black box machine learning
+                    model? We address this problem via smart guessing strategies
+                    that can be applied to any optimal branch-and-bound-based
+                    decision tree algorithm. The guesses come from knowledge
+                    gleaned from black box models. We show that by using these
+                    guesses, we can reduce the run time by multiple orders of
+                    magnitude while providing bounds on how far the resulting
+                    trees can deviate from the black box’s accuracy and expressive
+                    power. Our approach enables guesses about how to bin continuous features, the size of the tree, and lower bounds on the
+                    error for the optimal decision tree. Our experiments show that
+                    in many cases we can rapidly construct sparse decision trees
+                    that match the accuracy of black box models. To summarize:
+                    when you are having trouble optimizing, just guess.},
+  year          = {2022},
+  month         = {July},
+  url           = {https://arxiv.org/abs/2112.00798},
+  file          = {2112.00798.pdf},
+  eprintnover   = {2112.00798v7}
+}
+
+@article{378995.379232,
+  author        = {Emery D. Berger and Kathryn S. McKinley and Robert D. Blumofe and Paul R. Wilson},
+  title         = {Hoard: A Scalable Memory Allocator for Multithreaded Applications},
+  eprint        = {378995.379232},
+  archiveprefix = {},
+  primaryclass  = {},
+  abstract      = {Parallel, multithreaded C and C++ programs such as web servers,
+                    database managers, news servers, and scientific applications are becoming increasingly prevalent. For these applications, the memory
+                    allocator is often a bottleneck that severely limits program performance and scalability on multiprocessor systems. Previous allocators suffer from problems that include poor performance and scalability, and heap organizations that introduce false sharing. Worse,
+                    many allocators exhibit a dramatic increase in memory consumption when confronted with a producer-consumer pattern of object
+                    allocation and freeing. This increase in memory consumption can
+                    range from a factor of P (the number of processors) to unbounded
+                    memory consumption.
+                    This paper introduces Hoard, a fast, highly scalable allocator
+                    that largely avoids false sharing and is memory efficient. Hoard
+                    is the first allocator to simultaneously solve the above problems.
+                    Hoard combines one global heap and per-processor heaps with a
+                    novel discipline that provably bounds memory consumption and
+                    has very low synchronization costs in the common case. Our results on eleven programs demonstrate that Hoard yields low average fragmentation and improves overall program performance over
+                    the standard Solaris allocator by up to a factor of 60 on 14 processors, and up to a factor of 18 over the next best allocator we tested.},
+  year          = {2000},
+  month         = {Nov},
+  url           = {https://dl.acm.org/doi/10.1145/378995.379232},
+  file          = {https://dl.acm.org/doi/pdf/10.1145/378995.379232},
+  eprintnover   = {378995.379232}
 }
