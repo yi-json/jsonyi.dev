@@ -1,12 +1,12 @@
 github_users:
-  - jasonyi-unc
+  - yi-json
 
 repo_description_lines_max: 2
 
 github_repos:
-  - jasonyi-unc/jsonyi.dev
+  - yi-json/jsonyi.dev
   - llvm/llvm-project
   - cieslarmichal/faker-cxx
   - artur-varosyan/distributed-stock-exchange-environment
-  - jasonyi-unc/restaurant-finder
-  - jasonyi-unc/twittermenti
+  - yi-json/restaurant-finder
+  - yi-json/twittermenti
