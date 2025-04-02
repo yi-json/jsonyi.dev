@@ -18,7 +18,7 @@ Also known as [JSON](https://www.json.org/json-en.html), I'm an incoming Softwar
 
 I am currently a TA for COMP 550 (Algorithms), and was previously a TA for COMP 211 (System Fundamentals) in C for Fall 2024, and COMP 210 (Data Structures) in Java from Fall 2023 to Spring 2024.
 
-I was also a Research Assistant at an NSF-funded Research Training Group (RTG) at the UNC Statistics Department under [Prof. Chudi Zhong](https://chudizhong.github.io/) where I optimized Interpretable Machine Learning Algorithms in C++ and Python.
+I was also a Research Assistant at an NSF-funded Research Training Group (RTG) at the UNC Statistics Department under [Prof. Chudi Zhong](https://chudizhong.github.io/) where I optimized Interpretable ML Algorithms in C++ and Python.
 
 My interests lie in low-latency development, operating systems, machine learning, and algorithms.
 
