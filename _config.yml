@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Jason
-middle_name: Hyeongyun (현균)
+middle_name: (현균)
 last_name: Yi
 email: jasonyi@unc.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -81,7 +81,7 @@ dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: jasonyi-unc # your GitHub user name
+github_username: yi-json # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 instagram_id: # your instagram id
@@ -149,7 +149,7 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: jasonyi-unc/jasonyi-unc.github.io # <your-github-user-name>/<your-github-repo-name>
+  repo: yi-json/yi-json.github.io # <your-github-user-name>/<your-github-repo-name>
   repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
   category: General # name of the category under which discussions will be created
   category_id: # leave empty or specify your category_id (see https://giscus.app/)
