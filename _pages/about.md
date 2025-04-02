@@ -7,14 +7,14 @@ subtitle: Incoming SDE Intern at <a href='https://aws.amazon.com/'>Amazon (AWS)<
 profile:
   align: right
   image: me.jpg
-  image_circular: true # crops the image to make it circula
+  image_circular: true # crops the image to make it circular
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-People typically call me JSON. I'm an incoming Software Development Engineer Intern at Amazon in the AWS Insights and Optimizations team. I was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the Account Opening team using GraphQL and Angular. I'm a junior at [UNC-Chapel Hill](https://unc.edu) double majoring in Computer Science (B.S.) and Statistics and Analytics (B.S.)
+Also known as [JSON](https://www.json.org/json-en.html), I'm an incoming Software Development Engineer Intern at [Amazon](https://www.amazon.com/) in the AWS Insights and Optimizations team. I was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the Account Opening team using GraphQL and Angular. At school, I'm a junior at [UNC-Chapel Hill](https://unc.edu) double majoring in Computer Science (B.S.) and Statistics and Analytics (B.S.)
 
 I am currently a TA for COMP 550 (Algorithms), and was previously a TA for COMP 211 (System Fundamentals) in C for Fall 2024, and COMP 210 (Data Structures) in Java from Fall 2023 to Spring 2024.
 
