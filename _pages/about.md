@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Chapel Hill, NC, US
+subtitle: Incoming SDE Intern at <a href='https://aws.amazon.com/'>Amazon (AWS)</a> | Chapel Hill, NC, US
 
 profile:
   align: right
@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Also known as [JSON](https://www.json.org/json-en.html), I was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the Account Opening team. I am currently a junior at [UNC-Chapel Hill](https://unc.edu) double-majoring in Computer Science (B.S.) and Statistics and Analytics (B.S.).
+Also known as [JSON](https://www.json.org/json-en.html), I'm an incoming Software Development Engineer Intern at [Amazon](https://www.amazon.com/) in the AWS Insights and Optimizations team, and was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the Account Opening team. I am currently a junior at [UNC-Chapel Hill](https://unc.edu) double-majoring in Computer Science (B.S.) and Statistics and Analytics (B.S.).
 
 I'm also a TA for COMP 550 (Algorithms), and was previously a TA for COMP 211 (System Fundamentals) in C for Fall 2024, and COMP 210 (Data Structures) in Java from Fall 2023 to Spring 2024.
 
