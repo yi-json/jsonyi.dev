@@ -6,7 +6,7 @@ repo_description_lines_max: 2
 github_repos:
   - yi-json/cqlite
   - yi-json/auto-returns
-  - yi-json/cc-compilier
+  - yi-json/cc-compiler
   - yi-json/dsa-py
   - yi-json/restaurant-finder
   - yi-json/jsonyi.dev
