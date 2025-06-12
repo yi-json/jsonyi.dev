@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Also known as [JSON](https://www.json.org/json-en.html), I'm a Software Development Engineer Intern at [AWS](https://www.amazon.com/) in the [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) team, and was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the [Account Opening](https://www.fidelity.com/open-account/overview) team. I am currently a junior at [UNC-Chapel Hill](https://unc.edu) double-majoring in Computer Science (B.S.) and Statistics and Analytics (B.S.).
+Also known as [JSON](https://www.json.org/json-en.html), I'm a Software Development Engineer Intern at [AWS](https://aws.amazon.com/) in the [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) team, and was previously a Software Engineer Intern at [Fidelity Investments](https://www.fidelity.com/) in the [Account Opening](https://www.fidelity.com/open-account/overview) team. I'm an undergraduate at [UNC-Chapel Hill](https://unc.edu) double-majoring in Computer Science (B.S) and Statistics (B.S).
 
 I was a Research Assistant at an NSF-funded Research Training Group (RTG) at the UNC Statistics Department under [Prof. Chudi Zhong](https://chudizhong.github.io/) where I optimized Interpretable ML Algorithms in C++ and Python.
 
