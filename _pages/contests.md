@@ -3,7 +3,7 @@ layout: page
 permalink: /contests/
 title: Contests
 description: >
-nav: true
+nav: false
 nav_order: 5
 ---
 
