@@ -1294,3 +1294,8 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// Blog Post Preview Image
+.preview {
+  object-fit: cover;
+}

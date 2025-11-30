@@ -1,0 +1,135 @@
+---
+layout: post
+title: "Building Carapace: A Container Runtime from Scratch in Rust"
+date: 2025-11-23
+description: A deep dive into Linux Namespaces, Cgroups, and how I built a secure container runtime using Rust.
+tags: rust systems containers linux
+categories: low-level
+giscus_comments: true
+related_posts: false
+cover: carapace.webp
+cover_preview: carapace.webp
+toc:
+  sidebar: left
+---
+
+Containers feel like magic. You run a command, and suddenly your process is isolated in its own little world. But under the hood, there is no magic, just Linux primitives.
+
+In this post, I'll walk through how I built **Carapace**, a lightweight container runtime written in Rust. I'll explain the core technologies that make containers possible, such as**Namespaces**, **Cgroups**, and **Chroot**, and how Rust's safety guarantees make it the perfect language for systems programming.
+
+## The Core Primitives
+
+A "container" is effectively a process that is lied to by the kernel. We achieve this deception using three main tools:
+
+1.  **Namespaces:** Isolate *what* a process can see (PIDs, mounts, network).
+2.  **Cgroups (Control Groups):** Limit *how much* a process can use (CPU, RAM).
+3.  **Chroot:** Change *where* the process thinks the root of the filesystem is.
+
+## Phase 1: The Skeleton (Namespaces)
+
+The first step is to create a process that is "disconnected" from the host. We use the `unshare` syscall to create new "rooms" for the Hostname (UTS) and Process IDs (PID).
+
+I designed Carapace with a "Parent-Child" architecture:
+1.  **Parent:** Sets up isolation and spawns the child.
+2.  **Child:** Configures the environment (hostname, filesystem) and executes the user's command.
+
+```rust
+use nix::sched::{unshare, CloneFlags};
+use std::process::{Command, Stdio};
+
+fn run(cmd: String, args: Vec<String>) -> Result<()> {
+    println!("Parent: Setting up isolation...");
+
+    // 1. Create new "rooms" for Hostname (UTS) and PIDs
+    let flags = CloneFlags::CLONE_NEWUTS | CloneFlags::CLONE_NEWPID | CloneFlags::CLONE_NEWNS;
+    unshare(flags)?;
+
+    // 2. Re-Exec: spawn a copy of OURSELVES into those new rooms
+    let mut child = Command::new("/proc/self/exe")
+        .arg("child") // Call our internal "child" subcommand
+        .arg(cmd)
+        .args(args)
+        .spawn()?;
+
+    child.wait()?;
+    Ok(())
+}
+```
+
+By re-executing `/proc/self/exe`, we allow the child process to start fresh inside the new namespaces.
+
+## Phase 2: The Jail (Filesystem)
+
+Isolation isn't enough if the container can still see the host's files. We need to trap the process in a separate root filesystem (I used Alpine Linux for this).
+
+We use `chroot` to change the root directory and `chdir` to ensure the process is physically inside the new jail.
+
+```rust
+use nix::unistd::{chroot, chdir};
+
+fn child(cmd: String, args: Vec<String>) -> Result<()> {
+    println!("Child: Entering chroot jail...");
+    
+    // 1. The Lock: Restrict filesystem access to the 'rootfs' folder
+    chroot("rootfs")?; 
+    
+    // 2. The Entry: Move current working directory into the new root
+    chdir("/")?;
+
+    // 3. Mount /proc so tools like 'ps' work
+    mount(
+        Some("proc"),
+        "/proc",
+        Some("proc"),
+        MsFlags::empty(),
+        None::<&str>
+    )?;
+
+    // ... execute user command ...
+    Ok(())
+}
+```
+
+**Crucial Detail:** After `chroot`, the `/proc` directory is empty. We must manually mount the `proc` pseudo-filesystem so that tools like `ps` can read process information from the kernel.
+
+## Phase 3: Resource Limits (Cgroups)
+
+To prevent a container from hogging the entire machine's CPU or memory, we use **Control Groups (Cgroups)**.
+
+I implemented a "Sandwich Pattern" to manage the lifecycle of these resources:
+1.  **Setup:** Create the Cgroup and set limits *before* the child starts.
+2.  **Run:** The child process joins the Cgroup.
+3.  **Cleanup:** Delete the Cgroup *after* the child exits.
+
+```rust
+fn run(cmd: String, args: Vec<String>) -> Result<()> {
+    // 1. Setup: Build the "cage" first
+    setup_cgroups()?;
+
+    // ... start child process ...
+
+    child.wait()?;
+    
+    // 2. Cleanup: Remove the "cage" to prevent memory leaks
+    clean_cgroups()?;
+
+    Ok(())
+}
+```
+
+If we didn't clean up, the Cgroup directories would persist in `/sys/fs/cgroup/`, eventually causing a memory leak in the kernel.
+
+## Why Rust?
+
+Writing a container runtime involves a lot of raw system calls. In C, handling `unshare`, `chroot`, and memory management manually is a minefield.
+
+Rust gives me:
+*   **`Result<T, E>`:** Forces me to handle every syscall failure (no more silent crashes).
+*   **Safety:** The borrow checker ensures I'm not leaking memory or accessing invalid pointers.
+*   **FFI:** I even integrated a C++ inspector using Rust's FFI capabilities to read kernel versions!
+
+## Conclusion
+
+Building Carapace taught me that containers are a clever composition of Linux features that have existed for years. By implementing them from scratch, you gain a much deeper appreciation for the engineering behind Docker and Kubernetes.
+
+Check out the full source code on [GitHub](https://github.com/yi-json/carapace).
