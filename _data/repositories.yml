@@ -4,9 +4,9 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - yi-json/synapse
+  - yi-json/carapace
   - yi-json/cqlite
   - yi-json/auto-returns
-  - yi-json/cc-compiler
+  - yi-json/disk-scheduler
   - yi-json/dsa-py
-  - yi-json/restaurant-finder
-  - yi-json/jsonyi.dev
