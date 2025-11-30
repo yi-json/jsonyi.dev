@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Received the SDE Intern offer from Amazon !
+Received the SDE Intern offer from Amazon
