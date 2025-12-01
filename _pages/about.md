@@ -27,6 +27,6 @@ Courses I've been an Undergraduate Teaching Assistant for:
 * COMP 211: System Fundamentals in C (Fall 2024)
 * COMP 210: Data Structures and Analysis in Java (Fall 2023, Spring 2024)
 
-My interests lie in AI/ML infrastructure, cloud computing,low-level development, and algorithms.
+My interests lie in AI/ML infrastructure, cloud computing, low-level development, and algorithms.
 
 Feel free to reach me at jasonyi [at] unc [dot] edu
