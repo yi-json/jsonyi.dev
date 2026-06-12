@@ -1,0 +1,79 @@
+/*****************************
+ * About page custom sections
+ *****************************/
+
+.section-heading {
+  color: var(--global-theme-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.find-me {
+  margin-bottom: 2rem;
+
+  p {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.experience {
+  margin-bottom: 1.5rem;
+}
+
+.experience-timeline {
+  position: relative;
+  margin: 0 0 0 0.4rem;
+  padding-left: 1.75rem;
+  border-left: 2px solid var(--global-divider-color);
+
+  .experience-item {
+    position: relative;
+    padding-bottom: 1.75rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .experience-icon {
+      position: absolute;
+      left: -2.05rem;
+      top: 0.15rem;
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--global-text-color-light);
+      transition: color 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+    }
+
+    .experience-role {
+      margin: 0 0 0.15rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .experience-org {
+      display: inline-block;
+    }
+
+    .experience-year {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+    }
+
+    &:hover {
+      .experience-icon {
+        color: var(--global-theme-color);
+        transform: rotate(90deg) scale(1.35);
+        filter: drop-shadow(0 0 6px var(--global-theme-color));
+      }
+
+      .experience-role {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
