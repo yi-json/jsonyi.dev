@@ -18,12 +18,12 @@ Hello World, I'm Jason. My friends (informally) call me [JSON](https://www.json.
 
 I'm an undergraduate at [UNC-Chapel Hill](https://unc.edu) double-majoring in Computer Science (B.S) and Statistics (B.S).
 
-Internships:
+<!-- Internships:
 * Snowflake - [Cortex Agents, Threads, MCP](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents) (Fall 2026)
 * Google - [Fuchsia OS Bluetooth](https://fuchsia.dev/fuchsia-src/development/bluetooth/concepts/architecture) (Summer 2026)
 * Scale AI - [Generative AI](https://scale.com/genai-platform) (Fall 2025 + Winter 2026)
 * Amazon - [AWS Computer Optimizer](https://aws.amazon.com/compute-optimizer) (Summer 2025)
-* Fidelity Investments - [Account Opening](https://www.fidelity.com/open-account/overview) (Summer 2024)
+* Fidelity Investments - [Account Opening](https://www.fidelity.com/open-account/overview) (Summer 2024) -->
 
 Teaching Assistant Courses:
 * COMP 550: Algorithms (Fall 2025, Spring 2025)
